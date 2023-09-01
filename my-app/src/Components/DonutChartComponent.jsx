@@ -22,7 +22,10 @@ const DonutChartComponent = () => {
       },
     ],
     title: {
-      text: 'Work Life Balance',
+      text: "Work Life Balance",
+      style: {
+        color: "#F0EDFF",
+      },
     },
   };
 

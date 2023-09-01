@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import ReactDOM from 'react-dom';
-import ReactApexChart from 'react-apexcharts';
-
+import ReactApexChart from "react-apexcharts";
 
 const Radar = (props) => {
   const [series, setSeries] = useState([
     {
-      name: 'Series 1',
+      name: "Series 1",
       data: [20, 100, 40, 30, 50],
     },
   ]);
@@ -14,7 +13,7 @@ const Radar = (props) => {
   const [options, setOptions] = useState({
     chart: {
       height: 350,
-      type: 'radar',
+      type: "radar",
     },
     dataLabels: {
       enabled: true,
@@ -23,21 +22,24 @@ const Radar = (props) => {
       radar: {
         size: 140,
         polygons: {
-          strokeColors: '#e9e9e9',
+          strokeColors: "#e9e9e9",
           fill: {
-            colors: ['#f8f8f8', '#fff'],
+            colors: ["#f8f8f8", "#fff"],
           },
         },
       },
     },
     title: {
-      text: 'Psychological dimensions',
+      text: "Psychological dimensions",
+      style: {
+        color: "#F0EDFF",
+      },
     },
-    colors: ['#FF4560'],
+    colors: ["#FF4560"],
     markers: {
       size: 4,
-      colors: ['#fff'],
-      strokeColor: '#FF4560',
+      colors: ["#fff"],
+      strokeColor: "#FF4560",
       strokeWidth: 2,
     },
     tooltip: {
@@ -48,11 +50,13 @@ const Radar = (props) => {
       },
     },
     xaxis: {
-      categories: ['Openness',
-      'Conscientiousness',
-      'Extraversion',
-      'Agreeableness',
-      'Neuroticism'],
+      categories: [
+        "Openness",
+        "Conscientiousness",
+        "Extraversion",
+        "Agreeableness",
+        "Neuroticism",
+      ],
     },
     yaxis: {
       tickAmount: 7,
@@ -61,7 +65,7 @@ const Radar = (props) => {
           if (i % 2 === 0) {
             return val;
           } else {
-            return '';
+            return "";
           }
         },
       },
@@ -70,11 +74,14 @@ const Radar = (props) => {
 
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="radar" height={350} />
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="radar"
+        height={350}
+      />
     </div>
   );
 };
-
-
 
 export default Radar;

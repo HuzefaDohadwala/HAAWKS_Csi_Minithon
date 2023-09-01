@@ -1,58 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import ReactApexChart from 'react-apexcharts';
+import React, { useState, useEffect } from "react";
+import ReactApexChart from "react-apexcharts";
 
 const LineGraph = () => {
   const initialData = [];
   const XAXISRANGE = 10 * 1000; // Show last 10 seconds of data
 
   const [state, setState] = useState({
-    series: [{
-      data: initialData
-    }],
+    series: [
+      {
+        data: initialData,
+      },
+    ],
     options: {
       chart: {
-        id: 'realtime',
+        id: "realtime",
         height: 350,
-        type: 'line',
+        type: "line",
         animations: {
           enabled: true,
-          easing: 'linear',
+          easing: "linear",
           dynamicAnimation: {
-            speed: 1000
-          }
+            speed: 1000,
+          },
         },
         toolbar: {
-          show: false
+          show: false,
         },
         zoom: {
-          enabled: false
-        }
+          enabled: false,
+        },
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       stroke: {
-        curve: 'smooth'
+        curve: "smooth",
       },
       title: {
-        text: 'Heart Rate Per Second',
-        align: 'left'
+        text: "Heart Rate Per Second",
+        align: "left",
+        style: {
+          color: "#F0EDFF",
+        },
       },
       markers: {
-        size: 0
+        size: 0,
       },
       xaxis: {
-        type: 'datetime',
+        type: "datetime",
         range: XAXISRANGE,
       },
       yaxis: {
-        max: 180,  // Assuming a reasonable maximum heart rate for adults
-        min: 50   // Assuming a reasonable minimum heart rate for adults
+        max: 180, // Assuming a reasonable maximum heart rate for adults
+        min: 50, // Assuming a reasonable minimum heart rate for adults
       },
       legend: {
-        show: false
+        show: false,
       },
-    }
+    },
   });
 
   useEffect(() => {
@@ -60,18 +65,19 @@ const LineGraph = () => {
       // Simulate a new heart rate value between 60 and 100
       const newRate = Math.floor(Math.random() * 40) + 60;
       const x = new Date().getTime();
-      
+
       // Add new data and remove old data to fit into view
-      const updatedData = [
-        ...state.series[0].data,
-        { x, y: newRate }
-      ].slice(-10);
-      
-      setState(prevState => ({
+      const updatedData = [...state.series[0].data, { x, y: newRate }].slice(
+        -10
+      );
+
+      setState((prevState) => ({
         ...prevState,
-        series: [{
-          data: updatedData
-        }]
+        series: [
+          {
+            data: updatedData,
+          },
+        ],
       }));
     }, 1000);
 
@@ -81,7 +87,12 @@ const LineGraph = () => {
 
   return (
     <div id="chart">
-      <ReactApexChart options={state.options} series={state.series} type="line" height={350} />
+      <ReactApexChart
+        options={state.options}
+        series={state.series}
+        type="line"
+        height={350}
+      />
     </div>
   );
 };

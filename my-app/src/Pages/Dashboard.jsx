@@ -13,6 +13,9 @@ const Dashboard = () => {
         <div className="flex-1 chart_radar">
           <Radar />
         </div>
+        <div className="flex-1 chart_heatmap">
+          <HeatMapChart />
+        </div>
         <div className="flex-1 chart_donut">
           <DonutChartComponent />
         </div>
