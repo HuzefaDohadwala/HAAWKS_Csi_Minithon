@@ -1,46 +1,48 @@
-import React, { useState } from 'react';
-import ReactApexChart from 'react-apexcharts';
+import React from "react";
+import ReactApexChart from "react-apexcharts";
 
 const HeatMapChart = () => {
-  const generateData = (rows, cols) => {
-    const data = [];
-    for (let i = 0; i < rows; i++) {
-      const row = [];
-      for (let j = 0; j < cols; j++) {
-        row.push(Math.floor(Math.random() * 90));
-      }
-      data.push(row);
-    }
-    return data;
-  };
+  const series = [
+    {
+      name: "Metric1",
+      data: [
+        { x: "Hour 1", y: "Anger", value: 45 },
+        { x: "Hour 2", y: "Anger", value: 56 },
+        { x: "Hour 3", y: "Anger", value: 33 },
+        { x: "Hour 1", y: "Joy", value: 67 },
+        { x: "Hour 2", y: "Joy", value: 43 },
+        { x: "Hour 3", y: "Joy", value: 90 },
+      ],
+    },
+  ];
 
-  const rows = 2;
-  const cols = 5;
-
-  const [options, setOptions] = useState({
+  const options = {
     chart: {
       height: 350,
-      type: 'heatmap',
+      type: "heatmap",
     },
     dataLabels: {
       enabled: false,
     },
     colors: ["#008FFB"],
-    title: {
-      text: 'HeatMap Chart',
+    xaxis: {
+      type: "category",
+      categories: ["Hour 1", "Hour 2", "Hour 3"],
     },
-  });
-
-  const [series, setSeries] = useState([
-    {
-      name: 'Metric',
-      data: generateData(rows, cols),
+    yaxis: {
+      type: "category",
+      categories: ["Anger", "Joy"],
     },
-  ]);
+  };
 
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="heatmap" height={350} />
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="heatmap"
+        height={350}
+      />
     </div>
   );
 };

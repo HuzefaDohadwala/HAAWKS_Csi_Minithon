@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactApexChart from 'react-apexcharts';
+import React from "react";
+import ReactApexChart from "react-apexcharts";
 
 const DonutChartComponent = () => {
   const options = {
-    series: [44, 55, 41, 17, 15],
+    series: [40, 30, 20, 10], // These numbers could represent hours spent in each category per week, for example.
+    labels: ["Work", "Family", "Hobbies", "Other"], // Labels for each segment
     chart: {
-      type: 'donut',
+      type: "donut",
     },
     responsive: [
       {
@@ -15,7 +16,7 @@ const DonutChartComponent = () => {
             width: 200,
           },
           legend: {
-            position: 'bottom',
+            position: "bottom",
           },
         },
       },
