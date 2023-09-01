@@ -4,11 +4,11 @@ import { Canvas, useLoader, useFrame } from '@react-three/fiber'
 import { Center, Text3D } from '@react-three/drei'
 import { Bloom, EffectComposer, LUT } from '@react-three/postprocessing'
 import { LUTCubeLoader } from 'postprocessing'
-import { Beam } from './Components/Beam'
-import { Rainbow } from './Components/Rainbow'
-import { Prism } from './Components/Prism'
-import { Flare } from './Components/Flare'
-import { Box } from './Components/Box'
+import { Beam } from './Beam'
+import { Rainbow } from './Rainbow'
+import { Prism } from './Prism'
+import { Flare } from './Flare'
+import { Box } from './Box'
 
 export function lerp(object, prop, goal, speed = 0.1) {
   object[prop] = THREE.MathUtils.lerp(object[prop], goal, speed)
@@ -24,11 +24,10 @@ export function calculateRefractionAngle(incidentAngle, glassIor = 2.5, airIor =
   return theta
 }
 
-export default function App() {
+export default function Hero() {
   const texture = useLoader(LUTCubeLoader, 'https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/DwlG-F-6800-STD.cube')
 
   return (
-    <div>
     <Canvas orthographic gl={{ antialias: false }} camera={{ position: [0, 0, 100], zoom: 70 }}>
       <color attach="background" args={['black']} />
       <Scene />
@@ -37,7 +36,6 @@ export default function App() {
         <LUT lut={texture} />
       </EffectComposer>
     </Canvas>
-    </div>
   )
 }
 
