@@ -1,0 +1,20 @@
+.parent{
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay{
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-logo{
+    background-image: url("../img/logo.jpg");
+    background-size: cover;
+    /* background-position: left; */
+    background-repeat: no-repeat;
+
+}

@@ -23,4 +23,11 @@ code {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'neuropolx'; /* You can name it whatever you want */
+  src: url('../public/neuropol\ x\ free.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
