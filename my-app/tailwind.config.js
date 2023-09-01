@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'cyberpunk': ['Cyberpunk', 'sans-serif'], // Add your font family here
+        'cyberpunk': ['CyberpunkFont', 'sans-serif'],
       },
     },
   },

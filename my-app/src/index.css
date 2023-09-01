@@ -17,9 +17,10 @@ code {
 }
 
 @font-face {
-  font-family: 'CyberpunkFont'; /* You can name it whatever you want */
-  src: url('../public/Cyberpunk.ttf') format('ttf');
+  font-family: 'CyberpunkFont';
+  src: url('../public/Cyberpunk.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
