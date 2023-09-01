@@ -21,21 +21,37 @@ const Profile = () => {
               </div>
             </div>
 
-            <div className="sidebar-list flex flex-col h-full">
+            <div className="sidebar-list flex flex-col h-auto">
               {/* <h1 className='m-6 '>Virtual Profile</h1>
               <h1 className='m-6 '>Virtual Profile</h1>
               <h1 className='m-6 '>Virtual Profile</h1> */}
               <div className="itemslist h-20 flex justify-center items-center border-b-2">
               <h1 className=' '>Virtual Profile</h1>
               </div>
-              <div className="itemslist h-20 flex justify-center items-center border-b-2"><h1 className=' '>Transaction History</h1></div>
-              
-              <div className="itemslist h-20 flex justify-center items-center border-b-2">
-                <h1 className=' '>Cyber Enhancements</h1>
-              </div>
+              <div className="itemslist h-auto flex flex-col justify-center items-center border-b-2 p-2">
+                <h1 className="">Transaction History</h1>
+                <div className="w-full mt-4">
+                  <ul className="list-decimal list-inside">
+                    <li className="p-2 text-green-400">Credit: $50</li>
+                    <li className="p-2 text-red-500">Debit: $30</li>
+                    <li className="p-2 text-green-500 ">Credit: $100</li>
+                  </ul>
+                </div>
+                </div>
 
-              <div className="itemslist h-20 flex justify-center items-center">
-              <h1 className=' '>Settings</h1>
+              
+                <div className="itemslist h-auto flex flex-col justify-center items-center border-b-2 p-2">
+                  <h1 className="">Cyber Enhancements</h1>
+                  <div className="w-full mt-4">
+                    <ul className="list-decimal list-inside">
+                      <li className="p-2">10x Eye Enhancer</li>
+                      <li className="p-2">Intel HYDRAx CPx</li>
+                      <li className="p-2">AMD RunnerY</li>
+                    </ul>
+                </div>
+                </div>
+
+              <div className="itemslist h-15 flex justify-center items-center">
               </div>
 
             </div>

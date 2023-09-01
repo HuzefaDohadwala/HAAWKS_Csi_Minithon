@@ -10,11 +10,11 @@ function Home() {
       backgroundPosition: 'center' 
     }} >
         <h1 className="font-cyberpunk absolute text-8xl font-bold text-yellow-400 z-50 top-48">
-          CyberID
+          Cyberpunk.ID
         </h1>
         <ThreeDScene />
         <h1 className="font-cyberpunk absolute text-4xl font-bold text-purple-500 z-50 top-[40rem]">
-          Cyberpunk City's Control Center for Citizens.
+          City's Control Center for Citizens.
         </h1>
     </div>
   );

@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    position: fixed;  /* This makes the navbar fixed/sticky at the top */
+    position: absolute;  /* This makes the navbar fixed/sticky at the top */
     display: flex;
     justify-content: space-between;
     align-items: center;
