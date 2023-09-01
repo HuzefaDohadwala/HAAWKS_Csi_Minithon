@@ -8,14 +8,10 @@ import LineGraph from "../Components/LineGraph";
 
 const Dashboard = () => {
   return (
-    <>
-      <div>Dashboard</div>
+    <div className="pt-16 bg-black">
       <div className="flex items-center">
         <div className="flex-1 chart_radar">
           <Radar />
-        </div>
-        <div className="flex-1 chart_heatmap">
-          <HeatMapChart />
         </div>
         <div className="flex-1 chart_donut">
           <DonutChartComponent />
@@ -32,7 +28,7 @@ const Dashboard = () => {
           <LineGraph> </LineGraph>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

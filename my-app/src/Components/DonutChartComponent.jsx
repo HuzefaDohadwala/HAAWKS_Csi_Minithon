@@ -21,6 +21,9 @@ const DonutChartComponent = () => {
         },
       },
     ],
+    title: {
+      text: 'Work Life Balance',
+    },
   };
 
   return (
