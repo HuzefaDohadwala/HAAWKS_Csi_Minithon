@@ -31,7 +31,7 @@ const Profile = () => {
               <div className="itemslist h-20 flex justify-center items-center border-b-2"><h1 className=' '>Transaction History</h1></div>
               
               <div className="itemslist h-20 flex justify-center items-center border-b-2">
-              <h1 className=' '>Cyber Enhancements</h1>
+                <h1 className=' '>Cyber Enhancements</h1>
               </div>
 
               <div className="itemslist h-20 flex justify-center items-center">
