@@ -1,15 +1,36 @@
-import logo from "./logo.svg";
-import "./App.css";
-import ThreeDScene from "./ThreeDScene";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Dashboard from './Pages/Dashboard';
+import Profile from './Pages/Profile';
+import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen bg-black">
-        <h1 className="font-cyberpunk absolute text-8xl font-bold text-yellow-400 z-50 top-48">
-          Cyberpunk
-        </h1>
-        <ThreeDScene />
-    </div>
+    <Router>
+      <div>
+        {/* Navigation */}
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
